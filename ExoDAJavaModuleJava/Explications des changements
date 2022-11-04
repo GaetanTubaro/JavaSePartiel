@@ -1,0 +1,56 @@
+Général:
+- Création de plusieurs packages pour organiser les différents fichiers.
+- Indentation les fichiers.
+- Création de la Reine
+- Ajout de la demande du nom des Joueurs.
+- Création d'une classe Data pour enregistrer les noms des joueurs pour les afficher dans une liste globale, dans un but futur d'enregistrement.
+
+Fichier Execute:
+- Methode main mal écrite ( oublie du static et type string[] ).
+- g.lancer et non pas Game.lancer.
+
+Fichier Game:
+- Utilisation et getter pour tab.
+- Suppression du if sur init_piont car forcement une partie en mode normale.
+- echiquier = new Echiquier par besoin de passer par une variable.
+- private sur echiquier & listeJoueurs.
+- Suppression de la method abandonner() car non utiliser.
+- dans la methode bougerT2 suppression de l'argument depart car non utiliser.
+- Suppression la methode perso_init() car jamais utilisé.
+- x redondant dans la methode init_piont() + typage en int de x dans la boucle for.
+- Suppression de l'argument n dans la methode recommencerPartie().
+- dans la methode getEntree() suppresion de la variable pos car inutile + suppression des valeur depart de x & y.
+- Suppression de la valeur de depart de x dans la methode finDePartie().
+- Suppression d'une assignation de valeur de temp dans la méthode jouer() car jamais utiliser.
+
+Fichier piece:
+- public abstract class
+- Suppression du deuxiement constructeur car le boolean en plus n'est jamais utilisé et ce dernier est jamais appellé.
+
+Fichier Echiquier:
+- dans la méthode initialisation -> utilisation du getter getPosition();
+
+Fichier Position:
+- passer les méthodes clone() et iBounds() en public pour être utiliser en dehors de la classe.
+
+Fichier Joueur:
+- Constructeur en mode public
+- Propriété tab en private et generation de getter & setter
+- Methode updateTab -> les couleurs enemies sont inversées
+
+Fichier Roi:
+- Manque le public dans la méthode getRoicouleur() et update()
+- Private pour les proprietes de roi + getter & setter
+- echecEtPat devient pat;
+
+Fichier Pion:
+- Dans la méthode aCote() ligne 74 Temp1 = new Position (x,y)
+
+Fichier Fou & Tour:
+- Suppression du deuxieme constructeur
+
+Fichier Echiquier:
+- Switch sur les noms des classes qui sont en francais.
+
+Fichier Mouvement:
+- Interface en public.
